@@ -20,8 +20,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "check-memory": "cross-env NODE_OPTIONS=--max-old-space-size=4096 node check_memory.js",
     "start": "react-scripts start",
-    "build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "cross-env": "^7.0.3"
   }
 }
